@@ -14,11 +14,11 @@ import java.util.UUID;
 public class QueueDto implements Serializable {
     private String messageId;
     private String message;
-    private Instant createdAt;
+//    private Instant createdAt;
 
     public QueueDto(String message) {
         messageId = UUID.randomUUID().toString();
-        createdAt = Instant.now();
+//        createdAt = Instant.now();
         this.message = message;
     }
 }

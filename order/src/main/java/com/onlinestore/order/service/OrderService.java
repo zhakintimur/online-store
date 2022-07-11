@@ -23,7 +23,7 @@ public class OrderService {
 
 //    @Scheduled(fixedDelay = 1500L)
     public Order create(List<OrderDetails> orderDetailsList) {
-        var order = new Order();
+        var order = orderDetailsList.get(0).getOrder();
         var dto = new QueueDto("New Order #" + ++counter);
         messageProducer.send(dto);
         return order;
